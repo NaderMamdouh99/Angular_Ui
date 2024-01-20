@@ -1,0 +1,131 @@
+/* Parent Start (Css Style Using Grid System) */
+
+.parent{
+  display: grid;
+
+  grid-template-rows: 1fr;
+
+}
+
+/* Parent End (Css Style Using Grid System) */
+/* Child One Using Grid System Start */
+.child1{
+  display: grid;
+  grid-template-columns: repeat(9,1fr);
+  align-items: center;
+}
+/* gridChild One Using Grid System Start */
+.gridChild1{
+  grid-column: 9/10;
+  padding-left: 20px;
+}
+.TicketBooking{
+  background-color: #8a74f9;
+  border-radius: 5px;
+  color: white;
+  font:bold;
+  border: #8a74f9;
+  justify-items: end;
+}
+.TicketBooking:hover{
+  cursor: pointer;
+}
+
+
+/* gridChild One Using Grid System End */
+
+/* Child One Using Grid System End */
+
+/* gridChild Two Using Grid System Start */
+.gridChild2{
+  grid-column: 8/9;
+  grid-row: 1;
+
+}
+.Icons{
+  color: #8a74f9;
+}
+.Icons:hover{
+  cursor: pointer;
+}
+ .text{
+  text-align: center;
+}
+/* gridChild Two Using Grid System End */
+
+/* gridChild Three Using Grid System Start */
+.gridChild3{
+  grid-column: 1/4;
+  grid-row: 1;
+  font-family: 'Neo Sans Arabic',sans-serif;
+  padding-left: 10px;
+}
+
+.Checked{
+  font-family: 'Neo Sans Arabic',sans-serif;
+}
+
+
+.form-check-input:checked {
+  background-color: #8a74f9;
+  border-color: #8a74f9;
+}
+
+
+
+.gridC{
+padding-right: 5px;
+}
+/* gridChild Three Using Grid System End */
+
+
+
+/* Media Query Start */
+
+  @media screen and (min-width:300px) and (max-width:600px) {
+
+    .child1{
+      display: grid;
+      grid-template-columns: repeat(9,1fr);
+      grid-template-rows: repeat(2,1fr);
+      align-items: center;
+     }
+
+    .gridChild3{
+      grid-column: 1/9;
+      grid-row: 1/2;
+      font-family: 'Neo Sans Arabic',sans-serif;
+    }
+
+    .gridChild1{
+      grid-column: 6/10;
+      grid-row: 2/3;
+    }
+
+    .gridChild2{
+      grid-column: 1/6;
+      grid-row: 2/3;
+    }
+
+    .gridC{
+      position: relative;
+      left: 240px;
+      top: 27px;
+      }
+      .p-input-icon-left{
+        padding-left: 0;
+        position: relative;
+        right: 25px;
+      }
+    }
+
+/* Media Query End */
+
+
+
+
+
+
+
+
+

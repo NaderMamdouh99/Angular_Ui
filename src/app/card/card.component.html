@@ -1,0 +1,89 @@
+
+
+<!-- Body for Card -->
+  <section class="Container container">
+    <!-- Button Edit -->
+    <article class="box Top">
+      <section class="BOB item1"></section>
+      <section class="BOB item2"></section>
+      <section class="BOB item3"></section>
+      <!-- Edit -->
+      <section class="BOB item3">
+        <div class="Edit">
+
+          <span class="p-input-icon-left">
+            <i
+              class="fa-regular fa-pen-to-square"
+              style="color: slateblue; cursor: pointer"
+            ></i>
+            <input
+              type="text"
+              pInputText
+              [(ngModel)]="edit"
+              style="width: 80px; height: 35px"
+            />
+          </span>
+        </div>
+
+        </section>
+    </article>
+    <!-- Shape 1  &&  Shape 2-->
+    <article class="box Button">
+      <!-- Shape 1 Copy and Delete and Ticket and Effictive -->
+      <section class="DAD SHAP1">
+        <!-- Delete -->
+        <article class="MAM Delete">
+           <a class="Delete" (click)="Delete()"><i class="bi bi-trash3"></i></a>
+          </article>
+          <!-- Ticket  -->
+        <article class="MAM Ticket">
+          <p class="ShowLinkTiket">Show movie ticket</p>
+        </article>
+        <!-- Copy -->
+        <article class="MAM CCopy">
+          <div class="Copy">
+            <span class="p-input-icon-left">
+              <i
+                (click)="copyLink()"
+                class="pi pi-copy"
+                style="color: slateblue; cursor: pointer"
+              ></i>
+              <input
+                type="text"
+                pInputText
+                [(ngModel)]="value"
+                style="width: 200px; height: 35px"
+              />
+            </span>
+          </div>
+        </article>
+        <!-- Effictive -->
+        <article class="MAM Effict">
+           <p class="Effective">Valid until July,15,2023</p>
+          </article>
+      </section>
+      <!-- Shape 2   QR && Button Shared && Text Sale  -->
+      <section class="DAD SHAP2">
+        <!-- QR -->
+        <article class="Son QR">
+          <div class="QR">
+            <qrcode
+              [qrdata]="myAngularxQrCode"
+              [width]="80"
+              [errorCorrectionLevel]="'M'"
+            ></qrcode>
+          </div>
+        </article>
+        <!-- Button Shared -->
+        <article class="Son Share">
+          <a class="btn btn-outline-light Share">Share <i class="bi bi-send"></i></a>
+        </article>
+        <!-- Text Sale -->
+        <article class="Son sale">
+          <h4>SALE 25% </h4>
+
+        </article>
+      </section>
+
+    </article>
+  </section>

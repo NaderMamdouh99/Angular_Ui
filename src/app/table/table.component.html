@@ -1,0 +1,83 @@
+<!-- Start Component  -->
+ <section class="parent">
+  <!-- Child 1 Contain ==> Ticket booking  &&  CheckBox &&  Input Search -->
+  <article class="Box child1">
+    <!-- Ticket booking -->
+    <main class="Son gridChild1">
+      <button class="mt-2 TicketBooking p-2 ">Ticket booking</button>
+    </main>
+    <!-- CheckBox -->
+    <main class="Son gridChild2">
+      <div class="form-check form-switch Checked ">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+        <label class="form-check-label" for="flexSwitchCheckChecked">Checked</label>
+      </div>
+    </main>
+    <!-- Input Search -->
+    <main class="Son gridChild3">
+
+      <div class="Edit">
+        <span class="gridC">Ticket sales</span>
+        <span class="p-input-icon-left">
+          <i
+            class="fa-solid fa-magnifying-glass"
+            style="color: slateblue; cursor: pointer"
+          ></i>
+          <input
+            type="text"
+            pInputText
+            [(ngModel)]="edit"
+            style="width: 100%; height: 35px"
+          />
+        </span>
+      </div>
+    </main>
+  </article>
+  <article class="Box child2">
+  </article>
+  <!-- Child Two Contain ==> Table -->
+  <div class="card my-3">
+    <p-table
+        [value]="customers"
+        [paginator]="true"
+        [rows]="5"
+        [rowsPerPageOptions]="[5, 10, 20]"
+        [showCurrentPageReport]="true"
+        [tableStyle]="{ 'min-width': '60rem' }"
+    >
+        <ng-template pTemplate="header">
+            <tr>
+                <th class="text">#</th>
+                <th class="text">Name</th>
+                <th class="text">Ticket Number</th>
+                <th class="text" pSortableColumn="ticketvalue" >TicketValue <p-sortIcon field="ticketvalue"></p-sortIcon></th>
+                <th class="text">Cinemas</th>
+                <th class="text">People</th>
+                <th class="text">Number Buy</th>
+                <th class="text">Ticket</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-customer>
+            <tr>
+              <td class="text">{{ customer.id }}</td>
+                <td>
+                  <img [alt]="customer.image" src={{customer.image}} width="32" style="vertical-align: middle;border-radius: 50%;" />
+                  <span class="vertical-align-middle p-1">{{ customer.name }}</span>
+                </td>
+                <td class="text">{{ customer.ticketnumber }}</td>
+                <td class="text">{{ customer.ticketvalue | currency }}</td>
+                <td class="text" pInputText pTooltip={{customer.cinemas}}>Cinema Misr.Borg El Arab</td>
+                <td class="text">{{ customer.people }}</td>
+                <td class="text">{{ customer.numberbuy }}</td>
+                <td class="text">
+                  <i class="bi bi-cloud-arrow-down fa-lg Icons"  (click)="downloadPdf()"></i>
+                  {{ customer.ticket }}
+                  <i class="fa-solid fa-ticket-simple fa-lg Icons" ></i>
+
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+  </div>
+
+ </section>

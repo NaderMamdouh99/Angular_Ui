@@ -1,0 +1,85 @@
+
+
+<!-- Body Start -->
+ <section class="Container ">
+  <!-- Button Left Page -->
+   <article class="Box Top">
+
+      <div style="margin-bottom: 10px;">
+      <span class="p-input-icon-left" style="margin: 2px;">
+        <i
+          class="fa-solid fa-left-long"
+          style="color: rgba(13, 13, 14, 0.616); cursor: pointer"
+        ></i>
+        <input
+          type="text"
+          readonly
+          pInputText
+          style="width: 1px; height: 33px; background: rgba(0, 0, 0, 0.068);"
+        />
+      </span>
+      <span>Ticket Number #2342</span>
+    </div>
+
+   </article>
+   <!-- Shart and Dropdown -->
+   <article class="Box Button">
+
+    <div id="chart-container" style="position: relative; background-color: #ffffff; border-radius: 10px;">
+      <!-- Button in the top-right corner -->
+      <div id="button" style="position: absolute; top: 10px; right: 10px;">
+        <button
+          type="button"
+          class="btn btn-light dropdown-toggle"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+          style="background: rgba(0, 0, 0, 0.068)"
+        >
+          Years
+        </button>
+        <ul class="dropdown-menu">
+          <!-- ... Dropdown items ... -->
+          <li><a class="dropdown-item" href="#">2010</a></li>
+          <li><a class="dropdown-item" href="#">2011</a></li>
+          <li><a class="dropdown-item" href="#">2012</a></li>
+          <li><a class="dropdown-item" href="#">2013</a></li>
+          <li><a class="dropdown-item" href="#">2014</a></li>
+          <li><a class="dropdown-item" href="#">2015</a></li>
+          <li><a class="dropdown-item" href="#">2016</a></li>
+          <li><a class="dropdown-item" href="#">2017</a></li>
+          <li><a class="dropdown-item" href="#">2018</a></li>
+          <li><a class="dropdown-item" href="#">2019</a></li>
+          <li><a class="dropdown-item" href="#">2020</a></li>
+          <li><a class="dropdown-item" href="#">2021</a></li>
+          <li><a class="dropdown-item" href="#">2022</a></li>
+          <li><a class="dropdown-item" href="#">2023</a></li>
+        </ul>
+      </div>
+
+      <!-- Chart -->
+      <div id="chart" style="width: 100%;">
+        <apx-chart
+          [series]="chartOptions.series!"
+          [chart]="chartOptions.chart!"
+          [xaxis]="chartOptions.xaxis!"
+          [stroke]="chartOptions.stroke!"
+          [dataLabels]="chartOptions.dataLabels!"
+          [yaxis]="chartOptions.yaxis!"
+          [labels]="chartOptions.labels!"
+          [legend]="chartOptions.legend!"
+          [title]="chartOptions.title!"
+          [subtitle]="chartOptions.subtitle!"
+          [fill]="chartOptions.fill!"
+          style="width: 100%;"
+        ></apx-chart>
+      </div>
+    </div>
+
+
+
+  </article>
+</section>
+
+
+
+

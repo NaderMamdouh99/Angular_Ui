@@ -1,0 +1,21 @@
+
+/* Container Start Using Grid System */
+.Container{
+  display: grid;
+  grid-auto-rows: 1fr 3rf;
+  justify-items:start;
+  padding: 5%;
+}
+
+.Box{
+  width: 100%;
+}
+/* Container End */
+
+/* Media Query Start */
+@media screen and (min-width:300px) and (max-width:950px) {
+  .Container{
+    padding-bottom: 0;
+  }
+}
+/* Media Query End */

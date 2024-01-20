@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+/* styles.css */
+@import '~primeicons/primeicons.css';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+
+/* styles.css or styles.scss */
+
+/* Neo Sans Arabic */
+@font-face {
+  font-family: 'Neo Sans Arabic';
+  src: url('./assets/fonts/neosansarabic.woff') format('woff');
+  /* Add additional font formats if necessary (e.g., woff2) */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Inter */
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/inter.woff') format('woff');
+  /* Add additional font formats if necessary (e.g., woff2) */
+  font-weight: normal;
+  font-style: normal;
+}
